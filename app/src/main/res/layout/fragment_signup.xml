@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.auth.SignupFragment"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="Account Registration"
+        android:textSize="@dimen/_30ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="15dp"
+        android:id="@+id/registration_text"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        tools:text=""
+        android:maxLength="11"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintVertical_bias="0.3"
+        android:id="@+id/registration_ed_phone"
+        android:background="@drawable/input_shape"
+        android:textColorHint="@color/gray_500"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        android:inputType="textPassword"
+        tools:text=""
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintTop_toBottomOf="@id/registration_ed_phone"
+        app:layout_constraintLeft_toLeftOf="@id/registration_ed_phone"
+        app:layout_constraintRight_toRightOf="@id/registration_ed_phone"
+        android:id="@+id/registration_ed_password"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/input_shape"
+        app:endIconMode="password_toggle"
+        android:textColorHint="@color/gray_500"
+        app:endIconDrawable="@drawable/ic_visibility_off"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_shape"
+        app:layout_constraintRight_toRightOf="@id/registration_ed_phone"
+        android:hint="Confirm Password"
+        android:id="@+id/ed_confirm_password"
+        android:textColorHint="@color/gray_500"
+        app:layout_constraintLeft_toLeftOf="@id/registration_ed_phone"
+        android:inputType="textPassword"
+        android:layout_marginStart="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/registration_ed_password"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:text="InKas will send an SMS message to verfiy your phone number"
+        android:maxLines="2"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_confirm_password"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        style="@style/ShapeAppearanceOverlay.Material3.Button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        android:textAlignment="center"
+        android:text="Register"
+        android:textSize="@dimen/_14ssp"
+        app:cornerRadius="@dimen/_6sdp"
+        android:backgroundTint="@color/light_red"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textAllCaps="false"
+        android:id="@+id/btn_registration"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_registration"
+        android:text="Alreedy have an account? "
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/have_account_txt"
+        app:layout_constraintHorizontal_bias="0.36"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_login"
+        android:text="Login"
+        android:textColor="@color/blue_A700"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@id/btn_registration"
+        app:layout_constraintLeft_toRightOf="@id/have_account_txt"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/_8sdp"
+    >
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/cart_bag_icon"
+            android:src="@drawable/baseline_car_repair"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="TITLE"
+            app:layout_constraintTop_toTopOf="@id/cart_bag_icon"
+            app:layout_constraintLeft_toRightOf="@id/cart_bag_icon"
+            app:layout_constraintRight_toLeftOf="@id/help_state"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:id="@+id/help_title"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="need help to repair car engine"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/help_title"
+            app:layout_constraintLeft_toLeftOf="@id/help_title"
+            app:layout_constraintRight_toRightOf="@id/help_title"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/help_text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="5 Nov 2022 04:45 Pm"
+            app:layout_constraintTop_toBottomOf="@id/help_text"
+            app:layout_constraintLeft_toLeftOf="@id/help_title"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/help_date"
+            android:textSize="@dimen/_10ssp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Receiced"
+            app:layout_constraintTop_toTopOf="@id/help_title"
+            app:layout_constraintRight_toLeftOf="@id/help_details"
+            android:id="@+id/help_state"
+            android:textColor="@color/red"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:background="@drawable/help_state_received"
+            />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@id/help_state"
+            app:layout_constraintBottom_toBottomOf="@id/help_state"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/help_details"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:dividerInsetStart="@dimen/_10sdp"
+            app:dividerInsetEnd="@dimen/_10sdp"
+            android:id="@+id/divider"
+            app:dividerColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/help_date"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739770394452",
+    "firebase_url": "https://inkas-8249f-default-rtdb.firebaseio.com",
+    "project_id": "inkas-8249f",
+    "storage_bucket": "inkas-8249f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739770394452:android:4dd895dcec0f3287060ac1",
+        "android_client_info": {
+          "package_name": "com.elkfrawy.engaz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739770394452-sjrop8skmug0mrmglc68c0lp9onnooqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elkfrawy.engaz",
+            "certificate_hash": "8c65b6c13b0c8dd59d43ec7480b9cb7cf2da528a"
+          }
+        },
+        {
+          "client_id": "739770394452-7mklr11pc1456b40bobsf3t63p8aqqpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGdk0YJX8RgCj-8MdXuF47eF7K7Mw1Hfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739770394452-7mklr11pc1456b40bobsf3t63p8aqqpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

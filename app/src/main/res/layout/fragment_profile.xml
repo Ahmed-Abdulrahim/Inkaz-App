@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.profile.ProfileFragment"
+    android:background="@color/background"
+    >
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="profileFrame,
+         btn_edit_profile, user_img_card, info_scroll_view, profile_star"
+        android:id="@+id/all_view_groub"
+        />
+
+    <FrameLayout
+        android:id="@+id/profileFrame"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_155sdp"
+        android:background="@drawable/light"
+        android:alpha=".7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/baseline_edit"
+        app:layout_constraintRight_toRightOf="@id/profileFrame"
+        app:layout_constraintTop_toTopOf="@id/profileFrame"
+        android:layout_margin="@dimen/_12sdp"
+        android:id="@+id/btn_edit_profile"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_img_card"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_55sdp"
+        app:layout_constraintBottom_toBottomOf="@id/profileFrame"
+        app:layout_constraintLeft_toLeftOf="@id/profileFrame"
+        app:layout_constraintRight_toRightOf="@id/profileFrame"
+        app:layout_constraintTop_toTopOf="@id/profileFrame">
+
+    <ImageView
+        android:id="@+id/user_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/user2"
+        android:scaleType="centerCrop"
+         />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.5"
+        android:drawableStart="@drawable/baseline_star"
+        android:layout_margin="@dimen/_12sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/profile_star"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/profileFrame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        android:id="@+id/info_scroll_view"
+        android:layout_marginBottom="@dimen/_4sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/username_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:src="@drawable/baseline_account"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/username_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/username_icon"
+                    app:layout_constraintTop_toTopOf="@id/username_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ahmed Mohamed"
+                    android:id="@+id/user_name"
+                    app:layout_constraintLeft_toLeftOf="@id/username_text"
+                    app:layout_constraintTop_toBottomOf="@id/username_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobile_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/baseline_phone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Mobile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/phone_icon"
+                    app:layout_constraintTop_toTopOf="@id/phone_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0157786413547"
+                    android:id="@+id/user_mobile"
+                    app:layout_constraintLeft_toLeftOf="@id/phone_text"
+                    app:layout_constraintTop_toBottomOf="@id/phone_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/national_id_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/nationalid_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/id2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nationalid_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="National ID"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/nationalid_icon"
+                    app:layout_constraintTop_toTopOf="@id/nationalid_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="************"
+                    android:id="@+id/user_id"
+                    app:layout_constraintLeft_toLeftOf="@id/nationalid_text"
+                    app:layout_constraintTop_toBottomOf="@id/nationalid_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_address_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/baseline_location"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/address_icon"
+                    app:layout_constraintTop_toTopOf="@id/address_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mansoura"
+                    android:id="@+id/user_address"
+                    app:layout_constraintLeft_toLeftOf="@id/address_text"
+                    app:layout_constraintTop_toBottomOf="@id/address_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_type_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/car_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/baseline_car"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/car_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Car Model"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/car_icon"
+                    app:layout_constraintTop_toTopOf="@id/car_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMW"
+                    android:id="@+id/user_car_type"
+                    app:layout_constraintLeft_toLeftOf="@id/car_text"
+                    app:layout_constraintTop_toBottomOf="@id/car_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_color_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/car_color_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/baseline_car_color_"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/car_color_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Car Color"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/car_color_icon"
+                    app:layout_constraintTop_toTopOf="@id/car_color_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Red"
+                    android:id="@+id/user_car_color"
+                    app:layout_constraintLeft_toLeftOf="@id/car_color_text"
+                    app:layout_constraintTop_toBottomOf="@id/car_color_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_info_vg"
+                >
+
+                <ImageView
+                    android:id="@+id/car_info_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/baseline_location"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/car_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Car License Plate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/car_info_icon"
+                    app:layout_constraintTop_toTopOf="@id/car_info_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7865 - ا ب ح"
+                    android:id="@+id/car_license_info"
+                    app:layout_constraintLeft_toLeftOf="@id/car_info_text"
+                    app:layout_constraintTop_toBottomOf="@id/car_info_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:src="@drawable/server_error"
+        android:id="@+id/exception_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/profile_progress"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

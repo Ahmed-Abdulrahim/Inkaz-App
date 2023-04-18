@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/received_graph"
+    app:startDestination="@id/receivedFragment">
+
+    <fragment
+        android:id="@+id/receivedFragment"
+        android:name="com.elkfrawy.engaz.presentation.home.received.ReceivedFragment"
+        android:label="fragment_received"
+        tools:layout="@layout/fragment_received" >
+        <action
+            android:id="@+id/action_receivedFragment_to_receivedDetailsFragment"
+            app:destination="@id/receivedDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivedDetailsFragment"
+        android:name="com.elkfrawy.engaz.presentation.home.received.ReceivedDetailsFragment"
+        android:label="fragment_received_details"
+        tools:layout="@layout/fragment_received_details" >
+        <action
+            android:id="@+id/action_receivedDetailsFragment_to_receivedMapFragment"
+            app:destination="@id/receivedMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivedMapFragment"
+        android:name="com.elkfrawy.engaz.presentation.home.received.ReceivedMapFragment"
+        android:label="fragment_received_map"
+        tools:layout="@layout/fragment_received_map" />
+</navigation>
